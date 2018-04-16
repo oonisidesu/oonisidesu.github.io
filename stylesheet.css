@@ -1,4 +1,4 @@
-* {
+*{
   box-sizing: border-box;
 }
 
@@ -11,7 +11,12 @@ a {
   text-decoration: none;
 }
 
+.clear{
+  clear:left;
+}
+
 .container {
+  max-width:1170px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -19,7 +24,7 @@ a {
 
 .top-wrapper {
   padding: 180px 0 100px 0;
-  background-image: url(top.png);
+  background-image: url(https://prog-8.com/images/html/advanced/top.png);
   background-size: cover;
   color: white;
   text-align: center;
@@ -33,16 +38,18 @@ a {
 
 .top-wrapper p {
   opacity: 0.7;
-  font-size: 16px;
-  margin-bottom: 40px;
 }
 
-.btn-wrapper {
-  text-align: center;
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
 }
 
-.btn-wrapper p {
-  margin-bottom: 20px;
+.btn:hover {
+  opacity: 1;
 }
 
 .signup {
@@ -58,137 +65,55 @@ a {
   background-color: #55acee;
 }
 
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
+.btn-wrapper {
+  margin: 20px 0;
 }
 
-.btn:hover {
-  opacity: 1;
+.btn-wrapper p {
+  margin: 10px 0;
 }
 
-.fa {
+/* faクラスのmargin-rightを5pxに指定してください */
+.fab{
   margin-right: 5px;
+  color:yellow;
+  font-size: 1.5em;
 }
 
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34,49,52,0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
+header{
+  height:65px;
+  width:100%;
+  background-color:rgba(34, 49, 52, 0.9);
+  position:fixed;
+  top:0px;
+
+  /* z-indexを10に指定してください */
+  z-index:10;
 }
 
-.logo {
-  width: 124px;
-  margin-top: 20px;
+
+/* logoクラスのCSSを指定してください */
+.logo{
+  width:124px;
+  margin-top:20px;
 }
 
-.header-left {
-  float: left;
+.header-left{
+  float:left;
 }
 
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
 
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
+/* header-rightクラスのCSSを指定してください */
+.header-right{
+  float:right;
+  background-color:rgba(255, 255, 255, 0.3);
   transition: all 0.5s;
 }
 
-.header-right a:hover {
-  background-color: rgba(255,255,255,0.3);
-}
 
-.lesson-wrapper {
-  height: 580px;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
-  position: absolute;
-  top: 37%;
-  width: 100%;
-  color: white;
-}
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
-footer img {
-  width: 125px;
-}
-
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
-}
-
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
+/* header-rightクラスにhoverしたときのCSSを指定してください */
+.header-right:hover{
+  background-color:rgba(255, 255, 255, 0.5);
 }
 
 .menu-icon {
@@ -196,76 +121,110 @@ footer {
   float: right;
   font-size: 25px;
   padding: 21px 0;
-  display: none;
+  /* displayをnoneに指定してください */
+  display:none;
 }
 
-.clear {
-  clear: left;
+.header-right a{
+  line-height:65px;
+  padding:0px 25px;
+  color:white;
+  display: block;
 }
 
-@media all and (max-width: 1000px) {
-  .lesson {
-    width: 50%;
-    margin-bottom: 50px;
-  }
-
-  .lesson-wrapper {
-    height: 990px;
-  }
-
-  footer {
-    text-align: center;
-  }
+.lesson-wrapper{
+  padding-bottom:80px;
+  background-color:#f7f7f7;
+  text-align: center;
 }
 
-@media all and (max-width: 750px) {
-  .top-wrapper h1 {
-    font-size: 32px;
-  }
 
-  .heading h2 {
-    font-size: 20px;
-  }
+/* headingクラスのCSSを指定してください */
+.heading{
+  padding:60px 0px 30px 0px;
+  color:#5f5d60;
 }
 
-@media all and (max-width: 670px) {
-  .header-right {
-    display: none;
-  }
 
-  .menu-icon {
-    display: block;
-  }
+/* headingの中の<h2>のCSSを指定してください */
+.heading h2{
+  font-weight:normal;
+}
 
-  .top-wrapper .btn {
-    width: 100%;
-  }
+.lesson{
+  float:left;
+  width:25%;
+}
 
-  .twitter {
-    margin-top: 10px;
-  }
+.oota{
+  padding-top:40px;
+}
 
-  .top-wrapper {
-    text-align: left;
-  }
+.lesson-icon{
+  position:relative;
+}
 
-  .top-wrapper h1 {
-    font-size: 24px;
-  }
 
-  .top-wrapper p {
-    font-size: 14px;
-  }
+/* lesson-iconの中の<p>のCSSを指定してください */
+.lesson-icon p{
+  position:absolute;
+  top:90px;
+  width:100%;
+  color:white;
+}
 
-  .lesson {
-    width: 100%;
-  }
 
-  .lesson-wrapper {
-    height: 1700px;
-  }
+/* txt-contentsクラスのCSSを指定してください */
+.txt-contents{
+  width:80%;
+  display:inline-block;
+  margin:20px 0px 0px 0px;
+  font-size:12px;
+  color:#b3aeb5;
+}
 
-  .message-wrapper .btn {
-    width: 100%;
-  }
+.oota2{
+  padding-top: 50px;
+}
+
+.message-wrapper{
+  border-bottom:1px solid #eee;
+  padding-bottom:80px;
+  text-align:center;
+}
+/* messageのCSSを指定してください */
+.message{
+  background-color:#5dca88;
+  padding:15px 40px;
+  cursor:pointer;
+  box-shadow: 0px 7px #1a7940;
+}
+
+/* messageクラスがクリックされているときのCSSを指定してください */
+.message:active{
+  box-shadow:none;
+  position:relative;
+  top:7px;
+}
+/* headingの中の<h3>のCSSを指定してください */
+.heading h3{
+  font-weight:normal;
+}
+
+/* <footer>の中の<img>のCSSを指定してください */
+footer img{
+  width:125px;
+}
+
+
+/* <footer>の中の<p>のCSSを指定してください */
+footer p{
+  color:#b3aeb5;
+  font-size:12px;
+}
+
+
+/* <footer>のCSSを指定してください */
+footer{
+  padding-top:30px;
 }
